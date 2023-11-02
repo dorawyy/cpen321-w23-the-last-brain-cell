@@ -3,45 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rectangle_8" />
-
-    <TextView
-        android:id="@+id/forum_board_task_preview_title"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="28dp"
-        android:gravity="top"
-        android:text="Title"
-        android:textAppearance="@style/label_text_big"
-        app:layout_constraintStart_toEndOf="@+id/forum_board_task_preview_type"
-        app:layout_constraintTop_toTopOf="@+id/forum_board_task_preview_type" />
-
-    <TextView
-        android:id="@+id/forum_board_task_preview_description"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="12dp"
-        android:gravity="top"
-        android:text="Preview..."
-        android:textAppearance="@style/basic_text"
-        android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@+id/forum_board_task_preview_author"
-        app:layout_constraintTop_toBottomOf="@+id/forum_board_task_preview_author"
-        tools:gravity="left|center_vertical" />
+    android:layout_height="150dp">
 
     <TextView
         android:id="@+id/forum_board_task_preview_type"
@@ -49,16 +11,143 @@
         android:layout_height="25dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        android:elevation="4dp"
         android:gravity="left|center_vertical"
+        android:rotationX="-1"
         android:text="Task"
         android:textAppearance="@style/basic_text"
         android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
         tools:gravity="left|center_vertical"
         tools:textAlignment="center" />
+
+    <View
+        android:id="@+id/rectangle_4"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tiny_circle"
+        android:rotationX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forum_board_task_preview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="top"
+        android:rotationX="-1"
+        android:text="Title"
+        android:textAppearance="@style/label_text_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <View
+        android:id="@+id/rectangle_3"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_icon"
+        android:rotationX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <TextView
+        android:id="@+id/forum_board_task_preview_description"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="top"
+        android:rotationX="-1"
+        android:text="Preview..."
+        android:textAppearance="@style/basic_text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791"
+        tools:gravity="left|center_vertical" />
+
+    <TextView
+        android:id="@+id/time_stamp_text"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="13dp"
+        android:gravity="top"
+        android:rotationX="-1"
+        android:text="12:34:56"
+        android:textAppearance="@style/basic_text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
+        tools:gravity="left|center_vertical" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:rotationX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128"
+        app:srcCompat="@drawable/rectangle_8" />
+
+    <View
+        android:id="@+id/mode_commen"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/mode_comment"
+        android:rotationX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
 
     <TextView
         android:id="@+id/forum_board_task_preview_author"
@@ -66,13 +155,19 @@
         android:layout_height="25dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
         android:gravity="top"
+        android:rotationX="-1"
         android:text="Author"
         android:textAppearance="@style/basic_text"
         android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@+id/forum_board_task_preview_type"
-        app:layout_constraintTop_toBottomOf="@+id/forum_board_task_preview_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
         tools:gravity="left|center_vertical" />
 
     <View
@@ -81,9 +176,10 @@
         android:layout_height="4dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="12dp"
         android:background="@color/plotpals_grey"
-        app:layout_constraintTop_toBottomOf="@+id/forum_board_task_preview_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
         tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

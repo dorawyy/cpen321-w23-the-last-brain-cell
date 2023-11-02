@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -60,8 +62,10 @@ public class ForumBoardMainActivity extends NavBarActivity {
 
         TextView newPostText = findViewById(R.id.forum_board_new_post);
         TextView newTaskText = findViewById(R.id.forum_board_new_task);
+        View greyScreenOverlay = findViewById(R.id.plus_grey_screen);
         newPostText.setVisibility(View.GONE);
         newTaskText.setVisibility(View.GONE);
+        greyScreenOverlay.setVisibility(View.GONE);
 
         Log.d(TAG, "Garden Name:" + currentGardenName);
         TextView name = findViewById(R.id.forum_board_garden_name);
@@ -69,20 +73,24 @@ public class ForumBoardMainActivity extends NavBarActivity {
 
         ImageView arrow = findViewById(R.id.forum_board_arrow);
         arrow.setOnClickListener(view -> finish());
-//        arrow.setOnClickListener(view -> {
-//            Log.d(TAG, "Clicking Back Arrow");
-//            Intent myGardenIntent = new Intent(ForumBoardMainActivity.this, MyGardenYesGardenActivity.class);
-//            googleProfileInformation.loadGoogleProfileInformationToIntent(myGardenIntent);
-//            startActivity(myGardenIntent);
-//        });
+
+        greyScreenOverlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (greyScreenOverlay.getVisibility() == View.VISIBLE) {
+                    newTaskText.setVisibility(View.GONE);
+                    greyScreenOverlay.setVisibility(View.GONE);
+                }
+            }
+        });
 
         ImageView plus = findViewById(R.id.forum_board_plus);
         plus.setOnClickListener(view -> {
             Log.d(TAG, "Clicking Plus Sign");
-            // TODO: make invisible when clicked elsewhere
             // We disable posts for now
             // newPostText.setVisibility(newPostText.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
             newTaskText.setVisibility(newTaskText.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+            greyScreenOverlay.setVisibility(greyScreenOverlay.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
         });
 
         newPostText.setOnClickListener(view -> {
